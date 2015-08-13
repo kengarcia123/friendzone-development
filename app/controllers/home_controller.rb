@@ -1,4 +1,4 @@
 class HomeController < ApplicationController
-  def index
+  def user_index
   end
 end
