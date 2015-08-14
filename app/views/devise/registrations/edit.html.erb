@@ -6,6 +6,15 @@
         <%= devise_error_messages! %>
 
         <div class="field">
+          <%= f.label :profileImage, "Profile Picture" %><br/>
+          <%= f.file_field :profileImage,:class => "form-control", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :profileBanner, "Profile Banner" %><br/>
+          <%= f.file_field :profileBanner,:class => "form-control", autofocus: true %>
+        </div>
+
+        <div class="field">
           <%= f.label :first_name %><br/>
           <%= f.text_field :first_name, :class => "form-control", autofocus: true %>
         </div>

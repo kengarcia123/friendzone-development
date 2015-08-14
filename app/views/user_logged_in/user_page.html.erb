@@ -1,15 +1,47 @@
-<% if user_signed_in? %>
-    <h1>User Page</h1>
-    <p>Email: <%= current_user.email %></p>
-    <p>Firstname: <%= current_user.first_name %></p>
-    <p>Lastname : <%= current_user.last_name %></p>
-    <p>Age : <%= current_user.age %></p>
-    <p>Date of Birth: <%= current_user.date_of_birth %></p>
-    <p>Gender :
-      <% if current_user.is_female == true %>
-          <span>Female</span>
-      <% else %>
-          <span>Male</span>
-      <% end %>
-    </p>
-<% end %>
+<div class="container ">
+  <div class="row padding-10">
+
+    <div class="col-md-8">
+      <div class="col-sm-12  border-solid padding-30">
+        <div class="profile-banner">sdf
+        <%= image_tag current_user.profileBanner %>
+          <div class="profile-picture">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12  border-solid">
+        STATUS
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="col-sm-12 border-solid">
+        Personal Information
+      </div>
+      <div class="col-sm-12 border-solid">
+        <% if user_signed_in? %>
+            <p>Firstname: <%= current_user.first_name %></p>
+
+            <p>Lastname : <%= current_user.last_name %></p>
+
+            <p>Age : <%= current_user.age %></p>
+
+            <p>Email: <%= current_user.email %></p>
+
+            <p>Date of Birth: <%= current_user.date_of_birth %></p>
+
+            <p>Gender :
+              <% if current_user.is_female == true %>
+                  <span>Female</span>
+              <% else %>
+                  <span>Male</span>
+              <% end %>
+            </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

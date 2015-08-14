@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813172344) do
+ActiveRecord::Schema.define(version: 20150813215106) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20150813172344) do
     t.integer  "age",                    limit: 4
     t.datetime "date_of_birth"
     t.boolean  "is_female",                          default: false
+    t.string   "profileImage",           limit: 255
+    t.string   "profileBanner",          limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
