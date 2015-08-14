@@ -3,15 +3,13 @@
 
     <div class="col-md-8">
       <div class="col-sm-12  border-solid padding-30">
-        <div class="profile-banner">sdf
-        <%= image_tag current_user.profileBanner %>
-          <div class="profile-picture">
-
-          </div>
+        <div class="profile-banner">     <%= image_tag current_user.profileBanner, :class => "profile-banner" %></div>
+        <div class="profile-picture">
+            <%= image_tag current_user.profileImage, :class => "profile-picture" , :id=> "prof-pic" %>
         </div>
       </div>
       <div class="col-sm-12  border-solid">
-        STATUS
+        Photos
       </div>
     </div>
     <div class="col-md-4">
